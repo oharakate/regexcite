@@ -2,7 +2,8 @@ Package: regexcite
 Title: Splits A String Outputting a Character Vector
 Version: 0.0.0.9000
 Authors@R: 
-    person("Kate", "O'Hara", , "k.a.ohara@stir.ac.uk", role = c("aut", "cre"))
+    person("Kate", "O'Hara", , "k.a.ohara@stir.ac.uk", role = c("aut", "cre"),
+           comment = c(ORCID = "https://orcid.org/0000-0001-9991-108X"))
 Description: Convenience functions to make some common tasks with string
     manipulation and regular expressions a bit easier. 
 License: MIT + file LICENSE
