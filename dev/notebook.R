@@ -153,3 +153,55 @@ use_build_ignore("dev/")
 
 
 ####
+
+#### document() ####
+
+# I had to go into the function and, inside it, use the menus to choose
+# Code > Insert roxygen skeleton
+# and put in the bits.
+
+# Next we use document() to trigger the conversion of that roxygen markdown
+# entry into man/strsplit1.Rd :
+document()
+# To see it:
+?strsplit1
+# If that doesn't work, call load_all() again first.
+# Note that it says development documentation.
+
+####
+
+
+
+
+#### NAMESPACE changes ####
+
+# At this point, we also had a look at the NAMESPACE file, which got updated.
+# I think basically the export() command for the function needs to be in there
+# so that the function is available when the user attaches regexcite.
+
+####
+
+#### Use check() again ####
+check()
+# I have a note about the timestamp. Gemini LLM assures me this should be
+# fine and not affect the package creation. Can revisit this.
+####
+
+
+####
+
+
+#### install() ####
+
+# We can try installing it now.
+install()
+# That worked and now we are going to restart the session and try the thing.
+# Restarting session here.
+library(regexcite)
+# Worked.
+x <- "alfa,bravo,charlie,delta"
+strsplit1(x, split = ",")
+thing <- strsplit1(x, split = ",")
+str(thing)
+
+####
