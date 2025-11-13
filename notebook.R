@@ -115,8 +115,8 @@ exists("strsplit1", where = globalenv(), inherits = FALSE)
 # R/strsplit1.R file.
 # I've managed to commit my changes here, but they don't seem to be connected
 # my github.
-# Not sure I quite get this. Suspect I need to set up that remote link.
-# For now though I'm just going to commit here.
-# Saving this and using the Git pane.
+# I followed instructions here:
+# https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r
+# Let's see if anything works.
 
 ####
