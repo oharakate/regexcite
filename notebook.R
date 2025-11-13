@@ -17,6 +17,9 @@ library(devtools)
 package?devtools
 packageVersion("devtools")
 
+# use Git
+use_git()
+
 ####
 
 # I am going to work through this:
@@ -73,9 +76,63 @@ use_r("a_test")
 
 ####
 
-#### Loading the package with load_all()
+#### Loading the package with load_all() ####
 
 # load_all() makes the script available for experimentation...
 # Make sure devtools is loaded
 library(devtools)
 load_all()
+
+# Now we can call it in here and see how it works...
+# Make the string to play with:
+x <- "alfa,bravo,charlie,delta"
+strsplit1(x, split = ",")
+# What structure does it have?
+str(strsplit1(x, split = ","))
+# I think that means a character vector of length 4?
+
+# Book says...Note that load_all() has made the strsplit1() function available,
+# although it does not exist in the global environment.
+# This code checks if it exists in the global encironment I think:
+exists("strsplit1", where = globalenv(), inherits = FALSE)
+# False is the desired answer.
+
+# Come back and read about the whole point of load_all() in the book when
+# required.
+
+# To review what we’ve done so far:
+
+# We wrote our first function, strsplit1(), to split a string into a character
+# vector (not a list containing a character vector).
+# We used load_all() to quickly make this function available for interactive
+# use, as if we’d built and installed regexcite and attached it via
+# library(regexcite).
+####
+
+
+#### Commit strsplit1() ####
+
+# I got the following info from Gemini on committing changes with use_git
+# You should perform the following steps whenever you reach a logical
+# checkpoint in your package development (e.g., after adding a new feature,
+# fixing a bug, or finishing a documentation file):
+
+# - Action: Stage
+  # - RStudio: Check the box next to the modified files in the Git pane.
+  # - Command Line: git add .
+  # - Purpose: Selects which file changes should be included in the next snapshot.
+#
+# - Action: Commit
+  # - RStudio: Click the Commit button, write a descriptive message, and click
+  #   Commit in the dialog box.
+  # - Command Line: git commit -m "Your descriptive message"
+  # - Purpose: Records the staged changes as a permanent snapshot (a "commit")
+  #   in your local Git history.
+#
+# - Action: Push
+  # - RStudio: Click the Push (green up arrow) button.
+  # - Command Line: git push
+  # - Purpose: Uploads your new local commits to the remote repository (like GitHub) for backup and collaboration.
+
+# I'll try saving these changes now and committing and pushing.
+####
