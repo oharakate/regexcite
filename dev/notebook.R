@@ -263,4 +263,13 @@ str_split_one("a, b, c", pattern = ", ")
 ####
 
 
+#### use_readme_rmd() ####
+
+# Should do this as soon as we use github actually:
+use_readme_rmd()
+# Copied in the stuff from the website to readme.rmd
+# Then use this to render the READM:
+build_readme()
+# When I tried just knitting it it couldn't find the function, so good.
+
 ####
