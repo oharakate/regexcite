@@ -118,5 +118,11 @@ exists("strsplit1", where = globalenv(), inherits = FALSE)
 # I followed instructions here:
 # https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r
 # Let's see if anything works.
+# library(gitcreds)
+# create_github_token()
+# gitcreds_set()
+# Saved this file and it appeared in Git pane.
+# I was able to commit but not push yet.
+# I ran use_github() NOTE THE DIFFERENCE...
 
 ####
