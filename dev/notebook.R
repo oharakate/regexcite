@@ -22,7 +22,7 @@ library(gitcreds)
 
 # use Git
 # May need to do this bit first, making a token:
-library(gitcreds)
+# library(gitcreds)
 create_github_token()
 gitcreds_set()
 
