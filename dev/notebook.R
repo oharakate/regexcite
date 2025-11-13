@@ -236,5 +236,31 @@ use_test("strsplit1")
 # Then I ran the code I put in that file.
 # I had to run load_all() to get that to work.
 
+####
+
+
+#### use_package() ####
+
+# We are going to try using another package in this one. stringr
+use_package("stringr")
+# So a new version of the command. Put the following into strsplit1.R:
+# str_split_one <-  function(string, pattern, n = Inf) {
+#   stopifnot(is.character(string), length(string) <= 1)
+#   if (length(string) == 1) {
+#     stringr::str_split(string = string, pattern = pattern, n = n) [[1]]
+#   } else
+#     character()
+# }
+# First we change the name of the old function script with this special
+# command which update the associated test files too.
+rename_files("strsplit1", "str_split_one")
+# Then we made changes in the test file to reflect new functionality.
+# We need to run document() again.
+document()
+load_all()
+str_split_one("a, b, c", pattern = ", ")
+# Done
+####
+
 
 ####
