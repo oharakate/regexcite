@@ -111,28 +111,12 @@ exists("strsplit1", where = globalenv(), inherits = FALSE)
 
 
 #### Commit strsplit1() ####
+# The instructions are to use your own preferred method to ocmmit the new
+# R/strsplit1.R file.
+# I've managed to commit my changes here, but they don't seem to be connected
+# my github.
+# Not sure I quite get this. Suspect I need to set up that remote link.
+# For now though I'm just going to commit here.
+# Saving this and using the Git pane.
 
-# I got the following info from Gemini on committing changes with use_git
-# You should perform the following steps whenever you reach a logical
-# checkpoint in your package development (e.g., after adding a new feature,
-# fixing a bug, or finishing a documentation file):
-
-# - Action: Stage
-  # - RStudio: Check the box next to the modified files in the Git pane.
-  # - Command Line: git add .
-  # - Purpose: Selects which file changes should be included in the next snapshot.
-#
-# - Action: Commit
-  # - RStudio: Click the Commit button, write a descriptive message, and click
-  #   Commit in the dialog box.
-  # - Command Line: git commit -m "Your descriptive message"
-  # - Purpose: Records the staged changes as a permanent snapshot (a "commit")
-  #   in your local Git history.
-#
-# - Action: Push
-  # - RStudio: Click the Push (green up arrow) button.
-  # - Command Line: git push
-  # - Purpose: Uploads your new local commits to the remote repository (like GitHub) for backup and collaboration.
-
-# I'll try saving these changes now and committing and pushing.
 ####
