@@ -270,6 +270,37 @@ use_readme_rmd()
 # Copied in the stuff from the website to readme.rmd
 # Then use this to render the READM:
 build_readme()
-# When I tried just knitting it it couldn't find the function, so good.
+# When I tried just knitting it it couldn't find the function. This works.
 
 ####
+
+
+#### Finally, check() and install() ####
+check()
+install()
+####
+
+#### Review of key processes, but also check website ####
+
+# Here is a review of the key functions you’ve seen in this chapter, organized roughly by their role in the development process.
+#
+# These functions setup parts of the package and are typically called once per package:
+#
+#   create_package()
+# use_git()
+# use_mit_license()
+# use_testthat()
+# use_github()
+# use_readme_rmd()
+# You will call these functions on a regular basis, as you add functions and tests or take on dependencies:
+#
+#   use_r()
+# use_test()
+# use_package()
+# You will call these functions multiple times per day or per hour, during development:
+#
+#   load_all()
+# document()
+# test()
+# check()
+
