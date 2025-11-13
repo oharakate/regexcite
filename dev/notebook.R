@@ -16,9 +16,19 @@
 library(devtools)
 package?devtools
 packageVersion("devtools")
+# requires usethis ^
+
+library(gitcreds)
 
 # use Git
+# May need to do this bit first, making a token:
+library(gitcreds)
+create_github_token()
+gitcreds_set()
+
+# The gitHUB command was the one for connecting to github.
 use_git()
+use_github()
 
 ####
 
@@ -117,12 +127,29 @@ exists("strsplit1", where = globalenv(), inherits = FALSE)
 # my github.
 # I followed instructions here:
 # https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r
-# Let's see if anything works.
-# library(gitcreds)
-# create_github_token()
-# gitcreds_set()
-# Saved this file and it appeared in Git pane.
-# I was able to commit but not push yet.
+
+# This worked and the token will expire 13/11/2026 - let's see what happens.
+library(gitcreds)
+create_github_token()
+gitcreds_set()
+
 # I ran use_github() NOTE THE DIFFERENCE...
+# And this time was able to both commit and push to Github.
+# Have edited above.
+
+####
+
+
+#### Checking if whole package works with check() ####
+
+# R CMD check, executed in the shell, is the gold standard for checking that
+# an R package is in full working order. check() is a convenient way to run
+# this without leaving your R session.
+check()
+# It doesn't know what to do with "notebook.R".
+# I can add it to .Rbuildignore or, better, put it in a dev folder and
+# ignore that. Moved it.
+use_build_ignore("dev/")
+
 
 ####
