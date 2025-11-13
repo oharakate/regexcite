@@ -27,8 +27,9 @@ create_github_token()
 gitcreds_set()
 
 # The gitHUB command was the one for connecting to github.
-use_git()
-use_github()
+# I don't think I need to do this each time.
+# use_git()
+# use_github()
 
 ####
 
@@ -154,6 +155,14 @@ use_build_ignore("dev/")
 
 ####
 
+
+#### Edit DESCRIPTION #####
+# This is how I added an ORCID:
+# Authors@R:
+# person("Kate", "O'Hara", , "k.a.ohara@stir.ac.uk", role = c("aut", "cre"),
+       # comment = c(ORCID = "https://orcid.org/0000-0001-9991-108X"))
+####
+
 #### document() ####
 
 # I had to go into the function and, inside it, use the menus to choose
@@ -203,5 +212,29 @@ x <- "alfa,bravo,charlie,delta"
 strsplit1(x, split = ",")
 thing <- strsplit1(x, split = ",")
 str(thing)
+# Seems good.
+
+####
+
+
+
+
+#### use_testthat() ####
+
+# Now we are going to formalize our testing as a unit test.
+# It means we express a concrete expectation about the correct strsplit1()
+# result for a specific input.
+
+# To declare our intent to write unit tests:
+use_testthat()
+
+# Now we make a test for this specifically.
+# We are going to call it, but possibly it would know what is active...
+# Unsure about this.
+use_test("strsplit1")
+# OK, that made a new R file in /tests/.
+# Then I ran the code I put in that file.
+# I had to run load_all() to get that to work.
+
 
 ####
